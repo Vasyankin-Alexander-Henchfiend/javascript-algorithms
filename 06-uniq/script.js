@@ -8,8 +8,16 @@
 */
 
 function uniq(arr) {
-    // Напишите код здесь
-}
+    let answer = [];
+
+    for (let str of arr) {
+      if (!answer.includes(str)) {
+        answer.push(str);
+      }
+    }
+  
+    return answer;
+  }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 

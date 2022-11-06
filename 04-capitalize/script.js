@@ -1,15 +1,12 @@
-/*
- * Задача 4: «С большой буквы»
- *
- * Напишите функцию capitalize(str). Функция должна возвращать новую
- * строку каждое слово в которой начинается с прописной буквы.
- *
-*/
-
 function capitalize(str) {
-    // Напишите код здесь
+    let capStr = "";
+    for (let i = 0; i < str.length; i++) {
+      const letter = str[i];
+      if (str[i - 1] === " " || str[i - 1] === undefined)
+        capStr += letter.toUpperCase();
+      else capStr += letter;
+    }
+    return capStr;
 }
 
-// Протестируйте решение, вызывая функцию с разными аргументами:
-
-console.log(capitalize('молодость всё простит')); // "Молодость Всё Простит"
+console.log(capitalize('молодость всё простит'));
